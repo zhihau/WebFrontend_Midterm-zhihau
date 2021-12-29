@@ -55,6 +55,41 @@
     .div-bg-color{
       background-color: #DADDFC;
     }
+    .column{
+    width: 100px;
+    height: 549px;
+    /* background-color:turquoise; */
+}
+    .div1{
+  background-image: url("./images/row-1-column-1.png");
+}
+.div2{
+  background-image: url("./images/row-1-column-2.png");
+}
+.div3{
+  background-image: url("./images/row-1-column-3.png");
+}
+.div4{
+  background-image: url("./images/row-1-column-4.png");
+}
+.div5{
+  background-image: url("./images/row-1-column-5.png");
+}
+    .window{
+  position:relative;
+  
+  width: 500px;
+    height: 549px;
+}
+.window:hover .column{
+        animation-iteration-count: 1;
+        animation-name: leftRight;
+        animation-duration: 1s;
+      }
+      @keyframes leftRight {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(90deg);display:none;}
+}
   </style>
 </head>
 <body>
@@ -72,7 +107,10 @@
             </li>
             
                 <li class="nav-item">
-                <a class="nav-link" href="#">$category</a>
+                <a class="nav-link" href="#">PS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
                 </li>
            
   
@@ -81,14 +119,26 @@
         <div class="container-fluid  p-0">
           <div class="d-flex flex-wrap row no-gutters" id="homework">
             
-              <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='index.php'">
-                <img class="img-fluid" title="$desc" src="./images/istockphoto-1226478932-170667a.png" alt="">
+              <div class="col-md-4 col-sm-6 window d-flex" style="cursor: pointer;background-image: url('./images/storybook-cover.png');" onclick="window.location.href='http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php'">
+                <div style="position: absolute;left: 0; 
+                right: 0; 
+                margin-left: auto; 
+                margin-right: auto; 
+                width: 100px;">
+                    The text to be added, will be written here! :)
+                   </div>
+                <!-- <img class="img-fluid" title="$desc" src="./images/storybook-cover.png" alt=""> -->
+                <div class="column div1" style="background-image: url('./images/storybook-cover-1.png');"></div>
+                <div class="column div2" style="background-image: url('./images/storybook-cover-2.png');"></div>
+                <div class="column div3" style="background-image: url('./images/storybook-cover-3.png');"></div>
+                <div class="column div4" style="background-image: url('./images/storybook-cover-4.png');"></div>
+                <div class="column div5" style="background-image: url('./images/storybook-cover-5.png');"></div>
               </div>
-              <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='index.php'">
-                <img class="img-fluid" title="$desc" src="./images/istockphoto-1226478932-170667a.png" alt="">
+              <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='http://220.128.133.15/s1100423/collection/Projects/calendar/index.php'">
+                <img class="img-fluid" title="$desc" src="./images/calendar.png" alt="">
               </div>
-              <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='index.php'">
-                <img class="img-fluid" title="$desc" src="./images/istockphoto-1226478932-170667a.png" alt="">
+              <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='http://220.128.133.15/s1100423/collection/Projects/calendar/index.php'">
+                <img class="img-fluid" title="$desc" src="./images/calendar.png" alt="">
               </div>
               <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='index.php'">
                 <img class="img-fluid" title="$desc" src="./images/istockphoto-1226478932-170667a.png" alt="">
@@ -118,6 +168,27 @@
             $(this).toggle($(this).attr('onclick').toLowerCase().indexOf(value) > -1)
           });
         });
+        let arr=[
+            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
+            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
+            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
+            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
+            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
+            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"}
+        ];
+        let html="";
+        for(var j=0;j<arr.length;j++){
+            let dict=arr[j];
+            html+=`<div class="col-md-4 col-sm-6 window d-flex" style="cursor: pointer;background-image: url('${dict["content-image"]}');" onclick="window.location.href='${dict["url"]}'">`;
+            for(var i=1;i<=5;i++){
+                let coverImage=dict["cover-image"].replace("#",i);
+                html+=`<div class="column" style="background-image: url('${coverImage}');"></div>`;
+            }
+            html+=`</div>`;console.log(html);
+        }
+        console.log("aaa");
+        console.log(html);
+        // $("#homework").html(html);
       });
     </script>
   </body>

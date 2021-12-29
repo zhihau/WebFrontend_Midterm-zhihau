@@ -1,0 +1,131 @@
+:root {
+    --darkgray: #46608d;
+    --white: #F4F3F3;
+}
+
+* {
+    font-family: "Microsoft JhengHei";
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-icon {
+    color: var(--darkgray);
+    font-size: 28px;
+}
+
+.navbar-style {
+    background-color: var(--white)!important;
+    font-size: small;
+}
+
+.navbar-style a {
+    color: var(--darkgray)!important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    background-color: #DFDFDF;
+}
+
+.main {
+    /* 有需要卷軸自動出現 */
+    /* overflow: auto; */
+    padding-bottom: 150px;
+    /* this needs to be bigger than footer height*/
+}
+
+.footer {
+    /* position: relative; */
+    /* 負值往上長 */
+    margin-top: -150px;
+    height: 150px;
+    background-color: #BFD8D5;
+    font-size: small;
+    font-weight: bolder;
+    color: var(--darkgray);
+    border-top-width: 1px;
+    border-color: var(--darkgray);
+    border-style: solid;
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+    /* clear: both; */
+}
+
+.br {
+    border-right: 1rem solid #396EB0 !important;
+}
+
+.div-bg-color {
+    background-color: #DADDFC;
+}
+
+.card-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    color: var(--darkgray);
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.card-image {
+    max-width: 500px;
+    height: 500px;
+    /* border: solid 1px darkgrey; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-image-cursor {
+    cursor: pointer;
+}
+
+
+/* .back {
+    max-width: 500px;
+    height: 400px;
+    cursor: pointer;
+    background-image: url('images/calendar-content.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.front {
+     background-image: url("images/calendar-cover.png"); 
+
+max-width: 500px;
+height: 400px;
+ border: solid 1px darkgrey; 
+
+background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)),
+url(' images/calendar-cover.png ');
+background-repeat: no-repeat;
+background-size: cover;
+}
+*/
+
+.back:hover .front {
+    animation-iteration-count: 1;
+    animation-name: horizontal-rotate;
+    animation-duration: 1s;
+}
+
+@keyframes horizontal-rotate {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(90deg);
+    }
+}

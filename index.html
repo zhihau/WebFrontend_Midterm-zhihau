@@ -2,195 +2,99 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>許志浩的作品集</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
-  <style>
-    * {
-      /* border: 2px solid black; */
-      margin: 0;
-      padding: 0;
-    }
-
-    html,
-    body {
-      height: 100%;
-    }
-
-    .navbar{
-      background-color: #2E4C6D;
-    }
-
-    
-
-    .wrap {
-      min-height: 100%;
-      background-color: #396EB0;
-    }
-
-    .main {
-      /* 有需要卷軸自動出現 */
-      /* overflow: auto; */
-      padding-bottom: 150px;
-      /* this needs to be bigger than footer height*/
-    }
-
-    .footer {
-      /* position: relative; */
-      /* 負值往上長 */
-      margin-top: -150px;
-      height: 150px;
-      background-color: #FC997C;
-      /* clear: both; */
-    }
-
-    .br{
-      border-right: 1rem solid #396EB0 !important;
-    }
-
-    .div-bg-color{
-      background-color: #DADDFC;
-    }
-    .column{
-    width: 100px;
-    height: 549px;
-    /* background-color:turquoise; */
-}
-    .div1{
-  background-image: url("./images/row-1-column-1.png");
-}
-.div2{
-  background-image: url("./images/row-1-column-2.png");
-}
-.div3{
-  background-image: url("./images/row-1-column-3.png");
-}
-.div4{
-  background-image: url("./images/row-1-column-4.png");
-}
-.div5{
-  background-image: url("./images/row-1-column-5.png");
-}
-    .window{
-  position:relative;
-  
-  width: 500px;
-    height: 549px;
-}
-.window:hover .column{
-        animation-iteration-count: 1;
-        animation-name: leftRight;
-        animation-duration: 1s;
-      }
-      @keyframes leftRight {
-  from {transform: rotateY(0deg);}
-  to {transform: rotateY(90deg);display:none;}
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>許志浩的作品集</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <div class="wrap">
-      <div class="main">
-  
-  
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Note</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">ALL</a>
-            </li>
-            
-                <li class="nav-item">
-                <a class="nav-link" href="#">PS</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
-                </li>
-           
-  
-          </ul>
-        </nav>
-        <div class="container-fluid  p-0">
-          <div class="d-flex flex-wrap row no-gutters" id="homework">
-            
-              <div class="col-md-4 col-sm-6 window d-flex" style="cursor: pointer;background-image: url('./images/storybook-cover.png');" onclick="window.location.href='http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php'">
-                <div style="position: absolute;left: 0; 
-                right: 0; 
-                margin-left: auto; 
-                margin-right: auto; 
-                width: 100px;">
-                    The text to be added, will be written here! :)
-                   </div>
-                <!-- <img class="img-fluid" title="$desc" src="./images/storybook-cover.png" alt=""> -->
-                <div class="column div1" style="background-image: url('./images/storybook-cover-1.png');"></div>
-                <div class="column div2" style="background-image: url('./images/storybook-cover-2.png');"></div>
-                <div class="column div3" style="background-image: url('./images/storybook-cover-3.png');"></div>
-                <div class="column div4" style="background-image: url('./images/storybook-cover-4.png');"></div>
-                <div class="column div5" style="background-image: url('./images/storybook-cover-5.png');"></div>
-              </div>
-              <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='http://220.128.133.15/s1100423/collection/Projects/calendar/index.php'">
-                <img class="img-fluid" title="$desc" src="./images/calendar.png" alt="">
-              </div>
-              <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='http://220.128.133.15/s1100423/collection/Projects/calendar/index.php'">
-                <img class="img-fluid" title="$desc" src="./images/calendar.png" alt="">
-              </div>
-              <div class="col-md-4 col-sm-6" style="cursor: pointer;" onclick="window.location.href='index.php'">
-                <img class="img-fluid" title="$desc" src="./images/istockphoto-1226478932-170667a.png" alt="">
-              </div>
-          </div>
+        <div class="main">
+            <nav class="navbar navbar-expand-sm navbar-style">
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon">   
+                    <i class="fas fa-bars navbar-icon"></i>
+                </span>
+           </button>
+
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">ALL</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">PS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid  p-0">
+                <div class="d-flex flex-wrap row no-gutters" id="homework">
+
+                    <div class="col-md-4 col-sm-6 back d-flex card-image" onclick="window.location.href='http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php' ">
+
+                        <!-- <img class=" img-fluid " title="$desc " src="./images/storybook-cover.png " alt=" "> -->
+                        <div class="front col-12 card-image card-image-cursor">
+                            <div class="card-title">
+                                勇敢的猴子海賊團
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 back d-flex " style="cursor: pointer;background-image: url( 'images/calendar-content.png' );background-repeat: no-repeat; background-size: cover; " onclick="window.location.href='http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php' ">
+                        <div style="position: absolute;left: 0; right: 0; margin-left: auto; margin-right: auto; width: 150px;color:#6e7683; ">
+                            勇敢的猴子海賊團
+                        </div>
+                        <!-- <img class="img-fluid " title="$desc " src="./images/storybook-cover.png " alt=" "> -->
+                        <div class="front " style="background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)), url( ' images/calendar-cover.png '); background-repeat: no-repeat; background-size: cover; "></div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 back d-flex " style="cursor: pointer;background-image: url( 'images/calendar-content.png' );background-repeat: no-repeat; background-size: cover; " onclick="window.location.href='http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php' ">
+                        <div style="position: absolute;left: 0; right: 0; margin-left: auto; margin-right: auto; width: 150px;color:#6e7683; ">
+                            勇敢的猴子海賊團
+                        </div>
+                        <!-- <img class="img-fluid " title="$desc " src="./images/storybook-cover.png " alt=" "> -->
+                        <div class="front " style="background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)), url( ' images/calendar-cover.png '); background-repeat: no-repeat; background-size: cover; "></div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 back d-flex " style="cursor: pointer;background-image: url( 'images/calendar-content.png' );background-repeat: no-repeat; background-size: cover; " onclick="window.location.href='http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php' ">
+                        <div style="position: absolute;left: 0; right: 0; margin-left: auto; margin-right: auto; width: 150px;color:#6e7683; ">
+                            勇敢的猴子海賊團
+                        </div>
+                        <!-- <img class="img-fluid " title="$desc " src="./images/storybook-cover.png " alt=" "> -->
+                        <div class="front " style="background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)), url( ' images/calendar-cover.png '); background-repeat: no-repeat; background-size: cover; "></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-  
-      </div>
     </div>
     <!-- Copyright start -->
-    <footer class="jumbotron footer text-center py-3">© 2021 Copyright:
-      <a href="https://github.com/zhihau"> <i class="fab fa-github"></i></a>
+    <footer class="jumbotron footer text-center py-3 border-top-1 ">© 2021 Copyright:
+        <a href="https://github.com/zhihau "> <i class="fab fa-github "></i></a>
     </footer>
-  
+
     <!-- Copyright end-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $(".nav-link").on("click", function() {
-          var value = $(this).text().toLowerCase();
-          $(".nav-link").removeClass("active");
-          $(this).addClass("active");
-          if (value == "all") value = "";
-          $("#homework div").filter(function() {
-            $(this).toggle($(this).attr('onclick').toLowerCase().indexOf(value) > -1)
-          });
-        });
-        let arr=[
-            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
-            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
-            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
-            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
-            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"},
-            {"content-image":"images/storybook-content.png","cover-image":"images/storybook-cover-#.png","url":"http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php"}
-        ];
-        let html="";
-        for(var j=0;j<arr.length;j++){
-            let dict=arr[j];
-            html+=`<div class="col-md-4 col-sm-6 window d-flex" style="cursor: pointer;background-image: url('${dict["content-image"]}');" onclick="window.location.href='${dict["url"]}'">`;
-            for(var i=1;i<=5;i++){
-                let coverImage=dict["cover-image"].replace("#",i);
-                html+=`<div class="column" style="background-image: url('${coverImage}');"></div>`;
-            }
-            html+=`</div>`;console.log(html);
-        }
-        console.log("aaa");
-        console.log(html);
-        // $("#homework").html(html);
-      });
-    </script>
-  </body>
-  
-  </html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
+    <script src="js/main.js"></script>
+
+</html>

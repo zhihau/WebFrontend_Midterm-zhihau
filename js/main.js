@@ -4,7 +4,7 @@ $(document).ready(function() {
         $(".nav-link ").removeClass("active ");
         $(this).addClass("active ");
         if (value == "all ") value = " ";
-        $("#homework>div").filter(function() {
+        $("#content>div").filter(function() {
             // let link = $(this).attr('onclick');
             // console.log("LINK:" +
             //     link.toLowerCase());
@@ -44,8 +44,8 @@ $(document).ready(function() {
         "url": "http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php ",
         "title": "旅遊海報"
     }, {
-        "content-image": "images/storybook-content.png ",
-        "cover-image": "images/storybook-cover.png ",
+        "content-image": "images/banner-content.png ",
+        "cover-image": "images/banner-cover.png ",
         "url": "http://220.128.133.15/s1100423/collection/PS/banner/index.php ",
         "title": "banner設計"
     }];
@@ -63,5 +63,5 @@ $(document).ready(function() {
     }
     // console.log("aaa ");
     // console.log(html);
-    $("#homework ").html(html);
+    $("#content ").html(html);
 });

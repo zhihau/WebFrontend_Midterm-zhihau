@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+#content {
+    background-color: var(--white);
+}
+
 .navbar-icon {
     color: var(--darkgray);
     font-size: 28px;
@@ -76,7 +80,8 @@ body {
     color: var(--darkgray);
     font-weight: bold;
     text-align: center;
-    background-color: var(--white);
+    font-size: xxx-large;
+    text-shadow: 3px 3px lightgrey;
 }
 
 .card-image {

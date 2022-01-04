@@ -2,6 +2,9 @@
     --darkgray: #46608d;
     --white: #F4F3F3;
 }
+#logo{
+    background-color: var(--white);
+}
 #work_desc{
     min-height: 100%;
     background-color: var(--white);

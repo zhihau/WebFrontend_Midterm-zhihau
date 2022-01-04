@@ -37,7 +37,7 @@ $(document).ready(function() {
         "cover-image": "images/polling-cover.png ",
         "url": "http://220.128.133.15/s1100423/collection/Projects/polling/index.php ",
         "github": "https://github.com/wdaweb/php_polling-zhihau",
-        "desc": `<ul>
+        "desc": `<ul style='text-align: left;width: 50%;margin: auto;'>
             <li>一般帳號能登入系統、管理問卷、編輯會員資料、管理廣告。</li>
             <li>管理員帳號能管理問卷、廣告及會員。</li>
             <li>未登入的使用者能登入、註冊及查看問卷。</li>
@@ -68,8 +68,9 @@ $(document).ready(function() {
         let dict = arr[j];
         //d-flex 與display none衝突
         // html += `<div class="col-md-4 col-sm-6 back card-image " style="background-image: url( '${dict["content-image"]}'); " onclick="window.location.href='${dict["url"]}' ">`;
-        let githubData = dict["url"] ? "data-github = '" + dict['github'] + "'" : "";
-        html += `<div class="col-md-4 col-sm-6 back card-image " style="background-image: url( '${dict["content-image"]}'); " data-url="${dict["url"]}" ${githubData} data-img="${dict["cover-image"]}" data-desc="${dict["desc"]}">`;
+        
+        let githubData = (dict['github']!=undefined) ? "data-github = '" + dict['github'] + "'" : "";
+        html += `<div class="col-md-4 col-sm-6 back card-image " style="background-image: url( '${dict["content-image"]}'); " data-url="${dict["url"]}" ${githubData} data-img="${dict["cover-image"]}" data-desc="${dict["desc"]}" data-title="${dict["title"]}">`;
 
         html += `<div class="front col-12 card-image card-image-cursor " style="background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)), url( '${dict["cover-image"]}'); "><div class = "card-title w-100">${dict["title"]}</div></div>`;
 
@@ -81,18 +82,20 @@ $(document).ready(function() {
     $("#content ").html(html);
 
     $(".back").on("click", function() {
-        console.log("aaa");
+        // console.log("aaa");
         $("#button_site").attr("href", $(this).data("url"));
+        // console.log($(this).data("github"));
         if ($(this).data("github") != null) {
-            console.log("show");
+            // console.log("show");
             $("#button_github_navitem").show();
             $("#button_github").attr("href", $(this).data("github"));
         } else {
-            console.log("hide");
+            // console.log("hide");
             $("#button_github_navitem").hide();
         }
         $("#img_source").attr("src", $(this).data("img"));
         $("#img_desc").html($(this).data("desc"));
+        $("#img_title").html($(this).data("title"));
         // show work description
         $("#work_desc").show();
         $(".wrap").hide();

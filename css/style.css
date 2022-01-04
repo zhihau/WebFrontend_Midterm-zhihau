@@ -2,7 +2,11 @@
     --darkgray: #46608d;
     --white: #F4F3F3;
 }
-
+#work_desc{
+    min-height: 100%;
+    background-color: var(--white);
+    display: none;
+}
 * {
     font-family: "Microsoft JhengHei";
     margin: 0;
@@ -83,6 +87,14 @@ body {
     font-size: xxx-large;
     text-shadow: 3px 3px lightgrey;
 }
+
+.card-title-relative{
+    color: var(--darkgray);
+        font-weight: bold;
+        text-align: center;
+        font-size: xxx-large;
+        text-shadow: 3px 3px lightgrey;
+    }
 
 .card-image {
     /* max-width: 500px; */

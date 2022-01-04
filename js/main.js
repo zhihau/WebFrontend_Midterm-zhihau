@@ -3,8 +3,9 @@ $(document).ready(function() {
         var value = $(this).text().toLowerCase();
         $(".wrap  .nav-link ").removeClass("active ");
         $(this).addClass("active ");
-        if (value == "all ") value = " ";
-        $("#content>div").filter(function() {
+        if (value == "all") value = " ";
+        // console.log(value);
+        $("#content .back").filter(function() {
             // let link = $(this).attr('onclick');
             // console.log("LINK:" +
             //     link.toLowerCase());
@@ -15,9 +16,11 @@ $(document).ready(function() {
             // } else {
             //     $(this).hide();
             // }
-            $(this).toggle($(this).attr('onclick').toLowerCase().indexOf(value) > -1)
+            // console.log($(this).data("url"));
+            $(this).toggle($(this).data("url").toLowerCase().indexOf(value) > -1)
         });
     });
+
     let arr = [{
         "content-image": "images/storybook-content.png ",
         "cover-image": "images/storybook-cover.png ",
@@ -68,8 +71,8 @@ $(document).ready(function() {
         let dict = arr[j];
         //d-flex 與display none衝突
         // html += `<div class="col-md-4 col-sm-6 back card-image " style="background-image: url( '${dict["content-image"]}'); " onclick="window.location.href='${dict["url"]}' ">`;
-        
-        let githubData = (dict['github']!=undefined) ? "data-github = '" + dict['github'] + "'" : "";
+
+        let githubData = (dict['github'] != undefined) ? "data-github = '" + dict['github'] + "'" : "";
         html += `<div class="col-md-4 col-sm-6 back card-image " style="background-image: url( '${dict["content-image"]}'); " data-url="${dict["url"]}" ${githubData} data-img="${dict["cover-image"]}" data-desc="${dict["desc"]}" data-title="${dict["title"]}">`;
 
         html += `<div class="front col-12 card-image card-image-cursor " style="background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)), url( '${dict["cover-image"]}'); "><div class = "card-title w-100">${dict["title"]}</div></div>`;
@@ -106,4 +109,12 @@ $(document).ready(function() {
         $(".wrap").show();
         $("footer").show();
     });
-});
+
+    // ---- Login page ----
+    $("#userIcon").click(function() {
+        $("#userInput").focus();
+    });
+    $("#pwIcon").click(function() {
+        $("#pwInput").focus();
+    });
+}); //end document ready

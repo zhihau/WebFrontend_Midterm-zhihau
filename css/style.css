@@ -1,15 +1,20 @@
 :root {
     --darkgray: #46608d;
     --white: #F4F3F3;
+    --lightgreen: #BFD8D5;
+    --lightgray: #DFDFDF;
 }
-#logo{
+
+#logo {
     background-color: var(--white);
 }
-#work_desc{
+
+#work_desc {
     min-height: 100%;
     background-color: var(--white);
     display: none;
 }
+
 * {
     font-family: "Microsoft JhengHei";
     margin: 0;
@@ -56,7 +61,7 @@ body {
     /* 負值往上長 */
     margin-top: -150px;
     height: 150px;
-    background-color: #BFD8D5;
+    background-color: var(--lightgreen);
     font-size: small;
     font-weight: bolder;
     color: var(--darkgray);
@@ -91,13 +96,13 @@ body {
     text-shadow: 3px 3px lightgrey;
 }
 
-.card-title-relative{
+.card-title-relative {
     color: var(--darkgray);
-        font-weight: bold;
-        text-align: center;
-        font-size: xxx-large;
-        text-shadow: 3px 3px lightgrey;
-    }
+    font-weight: bold;
+    text-align: center;
+    font-size: xxx-large;
+    text-shadow: 3px 3px lightgrey;
+}
 
 .card-image {
     /* max-width: 500px; */

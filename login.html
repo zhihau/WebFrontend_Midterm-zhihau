@@ -9,7 +9,10 @@
     </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <style>
         * {
             font-family: "Microsoft JhengHei";
         }
@@ -17,32 +20,58 @@
         body {
             background-image: url("images/wood.jpg");
         }
-    </style>
+    </style> -->
 </head>
 
-<body>
+<body style="
+background-color: var(--white)!important;
+">
+    <nav class="navbar navbar-expand-sm navbar-style">
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
+              <span class="navbar-toggler-icon">   
+                <i class="fas fa-bars navbar-icon"></i>
+            </span>
+       </button>
+
+
+        <!-- Links -->
+        <div class="navbar-collapse collapse" id="collapsibleNavbar" style="
+font-size: xx-large;
+">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html"><i class="fa-solid fa-chevron-left"></i></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
     <div class="container mx-auto">
 
 
-        <div class="d-md-flex mx-auto justify-content-center flex-column p-4 border rounded mt-5 bg-white text-secondary" style="box-shadow: 2px 2px 5px lightgrey;max-width: 500px;">
+        <div class="d-md-flex mx-auto justify-content-center flex-column p-4 border rounded mt-5  " style="box-shadow: 2px 2px 5px var(--darkgray);max-width: 500px;background-color: var(--lightgray);color:var(--darkgray)">
             <h2 class="text-center">會員登入</h2>
-            <div class="border rounded" style="border-color:lightgray !important;font-size: larger;">
-                <div class="d-flex " style="border-color: lightgray;
+            <div class="border rounded" style="border-color:var(--darkgray) !important;font-size: larger;">
+                <div class="d-flex " style="border-color: var(--darkgray);
                     border-style: solid;
                     border-bottom-width: 1px;
                     border-top-width: 0px;
                     border-left-width: 0px;
                     border-right-width: 0px;">
-                    <i class="fa fa-user p-3 "></i><input class="border-0  w-100" type="text" name="account" placeholder="使用者帳號" maxlength="128">
+                    <i id="userIcon" class="fa fa-user p-3 " style="cursor: pointer;"></i>
+                    <input id="userInput" class="border-0  w-100" type="text" name="account" placeholder="使用者帳號" maxlength="128" style="background-color:var(--lightgray);padding-left: 5px;">
                 </div>
-                <div class="d-flex"> <i class="fa fa-lock p-3">
-                        </i><input class="border-0 w-100" type="password" name="password" placeholder="密碼" maxlength="128">
+                <div class="d-flex">
+                    <i id="pwIcon" class="fa fa-lock p-3" style="cursor: pointer;"></i>
+                    <input id="pwInput" class="border-0 w-100" type="password" name="password" placeholder="密碼" maxlength="128" style="background-color:var(--lightgray);padding-left: 5px;">
                 </div>
 
             </div>
 
 
-            <input type="button " style="font-size: larger;" class="btn btn-info mt-3 w-100" value="登入 ">
+            <input type="button " style="font-size: larger;background-color:var(--darkgray);color:var(--white)" class="btn mt-3 w-100" value="登入">
 
 
         </div>
@@ -51,6 +80,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js " integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2 " crossorigin="anonymous "></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

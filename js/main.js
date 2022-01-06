@@ -1,26 +1,17 @@
 $(document).ready(function() {
+    // ---- 首頁相關函式 ----
+    // 首頁導覽列，點擊過濾PS或者專案作品
     $(".wrap .nav-link ").on("click", function() {
         var value = $(this).text().toLowerCase();
         $(".wrap  .nav-link ").removeClass("active ");
         $(this).addClass("active ");
         if (value == "all") value = " ";
-        // console.log(value);
         $("#content .back").filter(function() {
-            // let link = $(this).attr('onclick');
-            // console.log("LINK:" +
-            //     link.toLowerCase());
-            // console.log("VAL:" + value);
-            // console.log($(this).attr('onclick').toLowerCase().indexOf(value) > -1);
-            // if ($(this).attr('onclick').toLowerCase().indexOf(value) > -1) {
-            //     $(this).show();
-            // } else {
-            //     $(this).hide();
-            // }
-            // console.log($(this).data("url"));
             $(this).toggle($(this).data("url").toLowerCase().indexOf(value) > -1)
         });
     });
 
+    // 作品資料區
     let arr = [{
         "content-image": "images/storybook-content.png ",
         "cover-image": "images/storybook-cover.png ",
@@ -65,12 +56,11 @@ $(document).ready(function() {
         "desc": "簡單的banner設計。",
         "title": "banner設計"
     }];
-    // console.log(arr);
+    
+    // 動態產生作品的前圖與後圖，前後圖用在翻頁動畫，當游標懸停在後圖，前圖做翻頁動作
     let html = " ";
     for (var j = 0; j < arr.length; j++) {
         let dict = arr[j];
-        //d-flex 與display none衝突
-        // html += `<div class="col-md-4 col-sm-6 back card-image " style="background-image: url( '${dict["content-image"]}'); " onclick="window.location.href='${dict["url"]}' ">`;
 
         let githubData = (dict['github'] != undefined) ? "data-github = '" + dict['github'] + "'" : "";
         html += `<div class="col-md-4 col-sm-6 back card-image " style="background-image: url( '${dict["content-image"]}'); " data-url="${dict["url"]}" ${githubData} data-img="${dict["cover-image"]}" data-desc="${dict["desc"]}" data-title="${dict["title"]}">`;
@@ -78,42 +68,47 @@ $(document).ready(function() {
         html += `<div class="front col-12 card-image card-image-cursor " style="background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)), url( '${dict["cover-image"]}'); "><div class = "card-title w-100">${dict["title"]}</div></div>`;
 
         html += `</div>`;
-        // console.log(html);
+        
     }
-    // console.log("aaa ");
-    // console.log(html);
+    // 加入作品截圖
     $("#content ").html(html);
 
+    // 在首頁按下作品截圖的連結，加入作品相關資料，以便在作品說明頁做使用
     $(".back").on("click", function() {
-        // console.log("aaa");
+        
         $("#button_site").attr("href", $(this).data("url"));
-        // console.log($(this).data("github"));
+        // 有提供github連結才顯示github按鈕
         if ($(this).data("github") != null) {
-            // console.log("show");
             $("#button_github_navitem").show();
             $("#button_github").attr("href", $(this).data("github"));
-        } else {
-            // console.log("hide");
+        } else {//沒提供github連結就不顯示github按鈕
             $("#button_github_navitem").hide();
         }
+        // 加入作品相關資料至作品說明頁上的元件
         $("#img_source").attr("src", $(this).data("img"));
         $("#img_desc").html($(this).data("desc"));
         $("#img_title").html($(this).data("title"));
-        // show work description
+        
+        // 顯示作品說明頁
         $("#work_desc").show();
         $(".wrap").hide();
         $("footer").hide();
     });
+
+    // ---- 作品說明頁相關函式 ----
+    // 在作品說明頁按下返回按鈕，顯示首頁
     $("#button_back").on("click", function() {
         $("#work_desc").hide();
         $(".wrap").show();
         $("footer").show();
     });
 
-    // ---- Login page ----
+    // ---- 登入頁相關函式 ----
+    // 點擊使用者圖示焦點至使用者輸入框
     $("#userIcon").click(function() {
         $("#userInput").focus();
     });
+    // 點擊鎖圖示焦點至密碼輸入框
     $("#pwIcon").click(function() {
         $("#pwInput").focus();
     });

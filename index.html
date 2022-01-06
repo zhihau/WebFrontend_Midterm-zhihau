@@ -13,7 +13,9 @@
 </head>
 
 <body>
+    <!-- ====作品說明頁面==== -->
     <div id="work_desc">
+        <!-- 導覽列 -->
         <nav class="navbar navbar-expand-sm navbar-style">
 
             <!-- Toggler/collapsibe Button -->
@@ -23,28 +25,29 @@
                 </span>
            </button>
 
-
             <!-- Links -->
             <div class="navbar-collapse collapse" id="collapsibleNavbar" style="
     font-size: xx-large;
 ">
                 <ul class="navbar-nav mr-auto">
+                    <!-- 返回首頁按鈕 -->
                     <li class="nav-item">
                         <a class="nav-link active" href="#" id="button_back"><i class="fa-solid fa-chevron-left"></i></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
+                    <!-- github按鈕，沒提供github連結不會顯示 -->
                     <li class="nav-item" id="button_github_navitem">
                         <a class="nav-link" target="_blank" href="#" id="button_github"><i class="fab fa-github "></i></a>
                     </li>
+                    <!-- 專案首頁按鈕 -->
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="#" id="button_site"><i class="fa fa-globe"></i></a>
                     </li>
-
-
                 </ul>
             </div>
         </nav>
+        <!-- 內容區塊，含有作品截圖及說明 -->
         <div class="container-fluid" style="
     background-color: var(--white)!important;
 ">
@@ -56,15 +59,15 @@
                     <div id="img_title" class="card-title-relative w-100">勇敢的猴子海賊團</div>
                     <p id="img_desc">閱讀勇敢的猴子海賊團，跟著海盜<span style="font-weight: bold;font-size: large;">莫迪</span>一起去冒險！</p>
                 </div>
-
             </div>
-
-
         </div>
     </div>
+    <!-- ====首頁==== -->
     <div class="wrap">
         <div class="main">
+            <!-- Logo -->
             <div class="text-center pt-3" id="logo"><img src="images/logo.png" alt=""></div>
+            <!-- 導覽列 -->
             <nav class="navbar navbar-expand-sm navbar-style">
 
                 <!-- Toggler/collapsibe Button -->
@@ -72,31 +75,30 @@
                   <span class="navbar-toggler-icon">   
                     <i class="fas fa-bars navbar-icon"></i>
                 </span>
-           </button>
-
-
+                </button>
                 <!-- Links -->
                 <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
                     <ul class="navbar-nav">
+                        <!-- 登入頁面連結 -->
                         <li class="nav-item">
                             <a class="nav-link" href="login.html">Login</a>
                         </li>
+                        <!-- 顯示所有作品連結 -->
                         <li class="nav-item">
                             <a class="nav-link active" href="#">ALL</a>
                         </li>
-
+                        <!-- 只顯示PS作品連結 -->
                         <li class="nav-item">
                             <a class="nav-link" href="#">PS</a>
                         </li>
+                        <!-- 只顯示專案作品連結 -->
                         <li class="nav-item">
                             <a class="nav-link" href="#">Projects</a>
                         </li>
-
-
                     </ul>
                 </div>
             </nav>
-
+            <!-- 首頁內容區塊 -->
             <div class="container-fluid  p-0">
                 <div class="row no-gutters" id="content">
                     <!-- 下面作品截圖僅供測試，作品截圖由js程式碼動態產生。 -->
@@ -113,12 +115,12 @@
 
         </div>
     </div>
-    <!-- Copyright start -->
+    <!-- 首頁頁尾區塊，版權宣告。 開始 -->
     <footer class="jumbotron footer text-center py-3 border-top-1 ">© 2021 Copyright:
         <a href="https://github.com/zhihau "> <i class="fab fa-github "></i></a>
     </footer>
 
-    <!-- Copyright end-->
+    <!-- 首頁頁尾區塊，版權宣告。 結束 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>

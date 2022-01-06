@@ -5,20 +5,21 @@
     --lightgray: #DFDFDF;
 }
 
-#logo {
-    background-color: var(--white);
-}
-
-#work_desc {
-    min-height: 100%;
-    background-color: var(--white);
-    display: none;
-}
-
 * {
     font-family: "Microsoft JhengHei";
     margin: 0;
     padding: 0;
+}
+
+#logo {
+    background-color: var(--white);
+}
+
+/* 作品說明頁面 */
+#work_desc {
+    min-height: 100%;
+    background-color: var(--white);
+    display: none;
 }
 
 #content {
@@ -82,6 +83,7 @@ body {
     background-color: #DADDFC;
 }
 
+/* 作品標題 */
 .card-title {
     position: absolute;
     left: 0;
@@ -104,10 +106,9 @@ body {
     text-shadow: 3px 3px lightgrey;
 }
 
+/* 作品截圖 */
 .card-image {
-    /* max-width: 500px; */
     height: 500px;
-    /* border: solid 1px darkgrey; */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -116,36 +117,14 @@ body {
     cursor: pointer;
 }
 
-
-/* .back {
-    max-width: 500px;
-    height: 400px;
-    cursor: pointer;
-    background-image: url('images/calendar-content.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.front {
-     background-image: url("images/calendar-cover.png"); 
-
-max-width: 500px;
-height: 400px;
- border: solid 1px darkgrey; 
-
-background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)),
-url(' images/calendar-cover.png ');
-background-repeat: no-repeat;
-background-size: cover;
-}
-*/
-
+/* 游標懸停在後圖，前圖做翻頁動作 */
 .back:hover .front {
     animation-iteration-count: 1;
     animation-name: horizontal-rotate;
     animation-duration: 1s;
 }
 
+/* 翻頁動畫 */
 @keyframes horizontal-rotate {
     from {
         transform: rotateX(0deg);

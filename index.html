@@ -8,6 +8,7 @@
     <title>許志浩的作品集</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css">
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -81,49 +82,150 @@
                     <ul class="navbar-nav">
                         <!-- 登入頁面連結 -->
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="#about">關於</a>
                         </li>
-                        <!-- 顯示所有作品連結 -->
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">ALL</a>
+                        <!-- 分類選單 -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link active" href="#">分類</a>
+                        </li> -->
+                        <!-- 作品分類選單 -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">作品</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#" data-category="all"> 全部</a>
+                                <a class="dropdown-item" href="#" data-category="PS"> 視覺設計 </a>
+                                <a class=" dropdown-item " href="# " data-category="Projects"> PHP專案 </a>
+                            </div>
                         </li>
                         <!-- 只顯示PS作品連結 -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">PS</a>
-                        </li>
+                        <!-- <li class=" nav-item ">
+                            <a class="nav-link " href="# ">PS</a>
+                        </li> -->
                         <!-- 只顯示專案作品連結 -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
+                        <!-- <li class="nav-item ">
+                            <a class="nav-link " href="# ">Projects</a>
+                        </li> -->
+                        <li class="nav-item ">
+                            <a class="nav-link " href="#skill">技能</a>
+                        </li>
+                        <!-- 登入頁面連結 -->
+                        <li class="nav-item ">
+                            <a class="nav-link " href="login.html ">管理</a>
                         </li>
                     </ul>
                 </div>
             </nav>
             <!-- 首頁內容區塊 -->
-            <div class="container-fluid  p-0">
-                <div class="row no-gutters" id="content">
+            <div class="container-fluid p-0 ">
+                <div class="row no-gutters " id="content">
                     <!-- 下面作品截圖僅供測試，作品截圖由js程式碼動態產生。 -->
-                    <!-- <div class="col-md-4 col-sm-6 back d-flex card-image" onclick="window.location.href='http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php' ">
+                    <!-- <div class="col-md-4 col-sm-6 back d-flex card-image " onclick="window.location.href='http://220.128.133.15/s1100423/collection/PS/Newsletter/index.php' ">
 
-                        <div class="front col-12 card-image card-image-cursor">
-                            <div class="card-title">
+                        <div class="front col-12 card-image card-image-cursor ">
+                            <div class="card-title ">
                                 勇敢的猴子海賊團
                             </div>
                         </div>
                     </div> -->
                 </div>
             </div>
+            <div id="about" class="container ">
+                <div class="row mt-3 ">
+                    <div class="col-md-8 ">
+                        <div class="normal-title w-100 ">關於</div>
+                        <p style="color: var(--darkgray); font-weight: bolder; "><span style="text-shadow: 1px 0 #888888; font-size: larger; ">我是許志浩</span>畢業於長榮大學，目前住於新北市五股區，過去有Python、C/C++、PHP、Golang、C#、Android軟體開發工作經驗，參與多項軟體開發，解決現實問題。並參加職訓局舉辦PHP資料庫網頁設計班，學習bootstrap、PHP、jQuery、JavaScript、HTML、CSS網頁工程師相關技能，期間製作多個網頁作品在此網站作呈現。喜歡研究各種新技術，以因應這個科技快速變化的時代，並樂於分享使得每個人都知道科技的便捷之處。</p>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="normal-title w-100 ">聯絡</div>
+                        <ul class="list-unstyled ">
+                            <a href=" "> </a>
+                            <li><a href="https://github.com/zhihau "><i class="fab fa-github "></i>&nbsp;GitHub</a></li>
+                            <li><a href="mailto:contactme@mail.com "><i class="fa-solid fa-envelope "></i>&nbsp;寄信給我</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row " style="display: flex;justify-content: center; "><a href="# ">回到頂部</a></div>
 
+
+
+            </div>
+            <div id="skill" class="container ">
+                <div class="row mt-5 ">
+                    <div class="col"><div class="normal-title w-100 ">技能</div></div>
+                    
+                </div>
+                <div class="row"style="color: var(--darkgray); font-weight: bolder; ">
+                    <div class="col-md-4 d-flex flex-column align-items-center"  >
+                        <div class="skill-icon">
+                            <a href="https://html.com/">
+                            <i class="fa-brands fa-html5"></i>
+                        </a>
+                        </div>
+                        <span style="text-shadow: 1px 0 #888888; font-size: larger; ">HTML</span>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                        <div class="skill-icon">
+                            <a href="https://www.w3.org/Style/CSS/Overview.en.html">
+                            <i class="fa-brands fa-css3"></i>
+                        </a>
+                        </div>
+                        <span style="text-shadow: 1px 0 #888888; font-size: larger; ">CSS</span>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                        <div class="skill-icon">
+                            <a href="https://www.javascript.com/">
+                            <i class="fa-brands fa-js"></i>
+                        </a>
+                        </div>
+                        <span style="text-shadow: 1px 0 #888888; font-size: larger; ">JavaScript</span>
+                    </div>
+                </div>
+                <div class="row  mt-3 mb-3"style="color: var(--darkgray); font-weight: bolder; ">
+                    <div class="col-md-4 d-flex flex-column align-items-center"  >
+                        <div class="skill-icon">
+                            <a href="https://www.php.net/">
+                            <i class="fa-brands fa-php"></i>
+                        </a>
+                        </div>
+                        <span style="text-shadow: 1px 0 #888888; font-size: larger; ">PHP</span>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                        <div class="skill-icon">
+                            <a href="mysql.com">
+                            <i class="fa-solid fa-database"></i>
+                        </a>
+                        </div>
+                        <span style="text-shadow: 1px 0 #888888; font-size: larger; ">MySQL</span>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                        <div class="skill-icon">
+                            <a href="https://jquery.com/">
+                            <i class="fa-solid fa-j"></i>
+                        </a>
+                        </div>
+                        <span style="text-shadow: 1px 0 #888888; font-size: larger; ">JQuery</span>
+                    </div>
+                </div>
+                <div class="row mb-5" style="display: flex;justify-content: center; "><a href="# ">回到頂部</a></div>
+
+
+
+            </div>
         </div>
+        <!-- end of main -->
+
+
     </div>
+    <!-- end of wrap -->
     <!-- 首頁頁尾區塊，版權宣告。 開始 -->
-    <footer class="jumbotron footer text-center py-3 border-top-1 ">© 2021 Copyright:
-        <a href="https://github.com/zhihau "> <i class="fab fa-github "></i></a>
+    <footer class="jumbotron footer text-center py-3 border-top-1 ">版權所有 © 2022 許志浩
+        
     </footer>
 
     <!-- 首頁頁尾區塊，版權宣告。 結束 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js "></script>
 
 </html>

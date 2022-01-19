@@ -1,10 +1,13 @@
 $(document).ready(function() {
     // ---- 首頁相關函式 ----
     // 首頁導覽列，點擊過濾PS或者專案作品
-    $(".wrap .nav-link ").on("click", function() {
-        var value = $(this).text().toLowerCase();
-        $(".wrap  .nav-link ").removeClass("active ");
-        $(this).addClass("active ");
+    $(".navbar .nav-link ").on("click", function() {
+        $(".navbar  .nav-link ").css("text-shadow", "");
+        $(this).css("text-shadow", "1px 0 #888888");
+    });
+    
+    $('.dropdown-item').on("click", function() {
+        let value = $(this).data("category").toLowerCase();
         if (value == "all") value = " ";
         $("#content .back").filter(function() {
             $(this).toggle($(this).data("url").toLowerCase().indexOf(value) > -1)
@@ -56,7 +59,7 @@ $(document).ready(function() {
         "desc": "簡單的banner設計。",
         "title": "banner設計"
     }];
-    
+
     // 動態產生作品的前圖與後圖，前後圖用在翻頁動畫，當游標懸停在後圖，前圖做翻頁動作
     let html = " ";
     for (var j = 0; j < arr.length; j++) {
@@ -68,27 +71,27 @@ $(document).ready(function() {
         html += `<div class="front col-12 card-image card-image-cursor " style="background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(211, 211, 211, 0.5)), url( '${dict["cover-image"]}'); "><div class = "card-title w-100">${dict["title"]}</div></div>`;
 
         html += `</div>`;
-        
+
     }
     // 加入作品截圖
-    $("#content ").html(html);
+    $("#content").html(html);
 
     // 在首頁按下作品截圖的連結，加入作品相關資料，以便在作品說明頁做使用
     $(".back").on("click", function() {
-        
+
         $("#button_site").attr("href", $(this).data("url"));
         // 有提供github連結才顯示github按鈕
         if ($(this).data("github") != null) {
             $("#button_github_navitem").show();
             $("#button_github").attr("href", $(this).data("github"));
-        } else {//沒提供github連結就不顯示github按鈕
+        } else { //沒提供github連結就不顯示github按鈕
             $("#button_github_navitem").hide();
         }
         // 加入作品相關資料至作品說明頁上的元件
         $("#img_source").attr("src", $(this).data("img"));
         $("#img_desc").html($(this).data("desc"));
         $("#img_title").html($(this).data("title"));
-        
+
         // 顯示作品說明頁
         $("#work_desc").show();
         $(".wrap").hide();

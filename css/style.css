@@ -11,11 +11,80 @@
     padding: 0;
 }
 
+body {
+    scroll-behavior: smooth;
+  }
+
+#skill a,#about a {
+    color: var(--darkgray);
+    font-weight: bolder;
+}
+
+.nav-link:hover {
+    border-bottom-width: 1px;
+    border-bottom-color: var(--darkgray);
+    border-style: solid;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding-bottom: 2px;
+    text-shadow: 1px 0 #888888;
+}
+.dropdown-item:hover{
+    background: var(--darkgray);
+    color: var(--white) !important;
+    font-weight: bolder;
+}
+
+.skill-icon{
+    border-radius: 38px;
+    /* background-color: darkgray; */
+    font-size: xxx-large;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border: 5px solid var(--darkgray);
+}
+.skill-icon:hover{
+   
+   animation-name: createBox;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+  @keyframes createBox {
+    from {
+      transform: scale(0) rotate(0deg);
+      /* background-color: rgba(220, 20, 60, 0.5); */
+      background-color: var(--white);
+      color:var(--darkgray);
+      /* border: 5px solid var(--darkgray); */
+    }
+    to {
+      transform: scale(1) rotate(360deg);
+      color:var(--white);
+      /* border: 5px solid var(--white); */
+      /* background-color: rgba(255, 127, 80, 0.5); */
+      
+      background-color: var(--lightgreen);
+      
+    }
+  }
+
+.normal-title {
+    color: var(--darkgray);
+    font-weight: bold;
+    font-size: xxx-large;
+    text-shadow: 3px 3px lightgrey;
+}
+
 #logo {
     background-color: var(--white);
 }
 
+
 /* 作品說明頁面 */
+
 #work_desc {
     min-height: 100%;
     background-color: var(--white);
@@ -83,7 +152,9 @@ body {
     background-color: #DADDFC;
 }
 
+
 /* 作品標題 */
+
 .card-title {
     position: absolute;
     left: 0;
@@ -106,7 +177,9 @@ body {
     text-shadow: 3px 3px lightgrey;
 }
 
+
 /* 作品截圖 */
+
 .card-image {
     height: 500px;
     background-repeat: no-repeat;
@@ -117,14 +190,18 @@ body {
     cursor: pointer;
 }
 
+
 /* 游標懸停在後圖，前圖做翻頁動作 */
+
 .back:hover .front {
     animation-iteration-count: 1;
     animation-name: horizontal-rotate;
     animation-duration: 1s;
 }
 
+
 /* 翻頁動畫 */
+
 @keyframes horizontal-rotate {
     from {
         transform: rotateX(0deg);
